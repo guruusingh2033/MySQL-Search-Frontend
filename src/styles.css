@@ -1,0 +1,112 @@
+
+body {
+     background:#fafafa;
+}
+
+.logout{
+    float: right;
+    margin-right: 5px
+}
+
+.margin-top-component
+{
+    margin-top: 20px
+}
+
+.text-font
+{
+    font-size: 60px
+}
+
+.text-center
+{
+    text-align: center;
+}
+.login-background
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 32px;
+}
+.m-b-0{
+    margin-bottom: 0px;
+}
+.jumbotron
+{
+    background: none;
+    color: rgb(80, 79, 79);
+    padding: 0;
+}
+
+.button-background
+{
+    background-color: rgb(80, 79, 79)
+}
+.text-color
+{
+    color: rgb(80, 79, 79)
+}
+.warning-color
+{
+    color: red
+}
+
+.form-background
+{
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+
+/* Login page start here  */
+
+.login-outer {
+    background: #fafafa;
+    padding: 30px;
+}
+.jumbotron h1 {
+    font-size: 34px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.form-background {
+    background: #f0f0f0;
+    padding: 33px;
+    border: 1px solid #ddd;
+}
+.form-background .text-color {
+    color: #4e4e4e;
+}
+.form-background .form-control {
+    padding: .5rem .75rem;
+    border-radius: 0;
+}
+.form-background .form-control:focus {
+    box-shadow: none;
+}
+.form-background .btn-primary {
+    border-radius: 30px;
+    border: none;
+}
+.form-background .btn-primary {
+    border-radius: 0;
+    border: none;
+    padding: 12px;
+    margin-top: 24px;
+}
+.form-background .btn-primary:hover {
+    background-color: rgb(99, 99, 99);
+}
+.form-group .button-background:hover {
+    background-color: rgb(99, 99, 99);
+}
+.form-group .button-background
+{
+ border-radius: 0;
+    border: none;
+}
+.form-background .btn-primary:focus {
+    box-shadow: none !important;
+}
