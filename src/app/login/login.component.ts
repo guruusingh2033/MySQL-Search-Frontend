@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
             username: ['', Validators.required],
             password: ['', Validators.required]
         });
+        this.loginCheck();
     }
 
     // convenience getter for easy access to form fields
@@ -50,5 +51,14 @@ export class LoginComponent implements OnInit {
                     this.alertService.error(error);
                     this.loading = false;
                 });
+    }
+
+    //login check
+    loginCheck()
+    {
+        if (localStorage.getItem('currentUser'))
+        {
+            this.router.navigate(['home'])
+        }
     }
 }
