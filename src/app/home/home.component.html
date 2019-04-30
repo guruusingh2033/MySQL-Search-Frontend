@@ -5,14 +5,13 @@
 
 <div class="login-background">
     
-    <div class="form-group">
+    <!-- <div class="form-group">
         <button class="btn btn-primary right-button button-background" (click)="logout()">Log Out</button>
-    </div>
+    </div> -->
 <!-- <h1 class="text-center text-color">Welcome to Dashboard</h1> -->
 
-<hr/>
 <div class="search-top">
-<p><b>Search:</b> </p>
+<h6>Search</h6>
 <div class="input-group">
 
 <span class="form-margin">devID:</span> <select (change)="onDevIdChange($event.target.value)"  class="form-control">
@@ -40,7 +39,7 @@
 <hr>
 
 <!-- Chart -->
-<b>Chart:</b> <div style="display: block">
+<h6>Chart:</h6> <div style="display: block">
     <canvas mdbChart [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels" [colors]="chartColors"
         [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)"
         (chartClick)="chartClicked($event)" scaleLength="1">
@@ -49,7 +48,7 @@
 <hr>
 
 <!-- table to show data -->
-<b>Table:</b><br><br> <div class="material-table">
+<h6>Table:</h6><div class="material-table">
 <table mat-table [dataSource]="sources" class="mat-elevation-z8">
 
 

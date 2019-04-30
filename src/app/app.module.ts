@@ -13,7 +13,8 @@ import { LoginComponent } from './login';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
+import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
+import { HeaderComponent } from './header';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
         AlertComponent,
         HomeComponent,
         LoginComponent,
+        HeaderComponent
     ],
     providers: [
         AuthGuard,

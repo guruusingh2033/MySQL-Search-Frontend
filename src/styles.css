@@ -9,7 +9,6 @@ body {
 .right-button{
     float: right;
     margin-right: 5px;
-    margin-top: -100px;
 }
 
 .margin-top-component
@@ -31,7 +30,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 32px;
+    /* padding-top: 32px; */
 }
 .m-b-0{
     margin-bottom: 0px;
@@ -66,7 +65,7 @@ body {
 /* Login page start here  */
 
 .login-outer {
-    background: #fafafa;
+    background: #fff;
     padding: 30px;
 }
 .jumbotron h1 {
@@ -149,11 +148,105 @@ background-color: rgb(99, 99, 99);
 
 .search-top
 {
-        margin-top:35px;
+        margin-top:30px;
 }
 
 .form-margin
 {
     margin-top: 7px;
     margin-right: 10px;
+}
+
+
+/* Custom CSS start here  */
+
+.page-header {
+     padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #343a40;
+}
+.page-header h4 {
+    margin: auto;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+}
+.page-header .form-group {
+margin: 0;
+    margin-left: auto;
+    position: absolute;
+    right: 20px;
+}
+.page-header .form-group .button-background {
+    border-radius: 0;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    padding: 8px 21px;
+}
+.orgs {
+    font-size: 21px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 10px;
+}
+.orgs b {
+    font-weight: 600;
+}
+.orgs:after {
+    content: "";
+    width: 38px;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+select.form-control {
+    background: url('./assets/images/backlog-select-arrow.svg');
+   -webkit-appearance: none;
+    background-position: 95% 12px;
+    background-size: 13px;
+    background-repeat: no-repeat;
+}
+select.form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #ced4da;
+}
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #ced4da;
+}
+.login-background h6 {
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 10px;
+}
+.material-table th {
+    background: #eee;
+}
+.material-table table {
+    box-shadow: none;
+}
+.material-table {
+    border: 1px solid #dcdcdc;
+}
+.material-table table h5 {
+    margin: 0;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+.material-table table tr:nth-child(even) {
+    background: #f2f2f2;
 }
