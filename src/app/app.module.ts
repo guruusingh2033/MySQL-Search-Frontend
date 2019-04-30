@@ -7,16 +7,25 @@ import { routing }        from './app.routing';
 
 import { AlertComponent } from './_directives';
 import { AuthGuard } from './_guards';
-import { AlertService, AuthenticationService } from './_services';
+import { AlertService, AuthenticationService, ApiService } from './_services';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule, } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
+
 
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        routing
+        routing,
+        MatTableModule,
+        BrowserAnimationsModule,
+        MatPaginatorModule,
+        ChartsModule, WavesModule
     ],
     declarations: [
         AppComponent,
@@ -28,6 +37,7 @@ import { LoginComponent } from './login';
         AuthGuard,
         AlertService,
         AuthenticationService,
+        ApiService,
     ],
     bootstrap: [AppComponent]
 })

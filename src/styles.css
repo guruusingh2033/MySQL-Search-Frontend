@@ -1,11 +1,15 @@
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
 body {
      background:#fafafa;
 }
 
-.logout{
+.right-button{
     float: right;
-    margin-right: 5px
+    margin-right: 5px;
+    margin-top: -100px;
 }
 
 .margin-top-component
@@ -109,4 +113,47 @@ body {
 }
 .form-background .btn-primary:focus {
     box-shadow: none !important;
+}
+
+.dash-search-button
+{
+    margin-left: 10px;
+     box-shadow: none !important;
+     border-radius: 0;
+    border: none;
+     background-color: #4e4e4e;
+}
+
+.dash-search-button:hover{
+background-color: rgb(99, 99, 99);
+}
+
+.table {
+  width: 100%;
+}
+
+ .material-table table {
+  width: 100%;
+}
+
+.dash-margin
+{
+    margin-left: 45px;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+.textbox-height{
+    height: 40px;
+}
+
+.search-top
+{
+        margin-top:35px;
+}
+
+.form-margin
+{
+    margin-top: 7px;
+    margin-right: 10px;
 }
