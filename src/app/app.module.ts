@@ -11,7 +11,7 @@ import { AlertService, AuthenticationService, ApiService } from './_services';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule, } from '@angular/material';
+import { MatPaginatorModule, } from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
 import { HeaderComponent } from './header';
@@ -26,7 +26,8 @@ import { HeaderComponent } from './header';
         MatTableModule,
         BrowserAnimationsModule,
         MatPaginatorModule,
-        ChartsModule, WavesModule
+        ChartsModule, 
+        WavesModule,
     ],
     declarations: [
         AppComponent,
