@@ -16,7 +16,7 @@
     <option *ngFor="let source of onLoadSource">{{source.source}}</option>
 </select>
 
-<span class="dash-margin">Pattern:</span> <input type="text" placeholder="Search" (keyup)="searchEvent($event.target.value)" class="form-control textbox-height">
+<span class="dash-margin">Pattern:</span> <input type="text" placeholder="*" (keyup)="searchEvent($event.target.value)" class="form-control textbox-height">
 
 <span class="dash-margin">Time History:</span> <select (change)="timeFilter($event.target.value)" class="form-control">
     <option value="1">24 hrs</option>
