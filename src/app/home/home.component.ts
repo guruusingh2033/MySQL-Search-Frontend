@@ -40,8 +40,8 @@ export class HomeComponent implements OnInit {
         this.defaultDate();
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.organization = this.currentUser[0].org;
-        this.getDeviceIdByOrganization(); 
         this.getCurentDate();
+        this.getDeviceIdByOrganization();         
         }
 
         defaultDate()
@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit {
             var temp = this.currentDate.setDate(this.currentDate.getDate() - 7);
             this.startDate = new Date(temp);
             this.endDate = new Date(); 
-            this.timeHistoryData(this.startDate, this.endDate)           
         }
 
         chart()
@@ -90,6 +89,7 @@ export class HomeComponent implements OnInit {
                     this.devIdForSearch = this.sources[0].devID;
                     this.sourceValue = this.sources[0].source;
                     this.onLoadSource = this.sources;
+                    this.timeHistoryData(this.startDate, this.endDate);
                     this.showLoader = false;
                 })
         })
