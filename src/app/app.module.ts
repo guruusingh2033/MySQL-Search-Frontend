@@ -6,15 +6,12 @@ import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
 
 import { AlertComponent } from './_directives';
-import { AuthGuard } from './_guards';
 import { AlertService, AuthenticationService, ApiService } from './_services';
 import { HomeComponent } from './home';
-import { LoginComponent } from './login';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, } from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
-import { HeaderComponent } from './header';
 
 
 @NgModule({
@@ -32,12 +29,9 @@ import { HeaderComponent } from './header';
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent,
-        LoginComponent,
-        HeaderComponent
+        HomeComponent
     ],
     providers: [
-        AuthGuard,
         AlertService,
         AuthenticationService,
         ApiService,
