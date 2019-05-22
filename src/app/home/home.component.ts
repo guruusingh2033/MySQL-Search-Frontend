@@ -50,6 +50,7 @@ export class HomeComponent implements OnInit {
 
         //on page load
     onPageLoad() {
+        this.defaultDate();
         this.loading = true;
         this.authenticationService.login(this.loginData)
             .subscribe(
