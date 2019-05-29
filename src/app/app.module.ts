@@ -8,6 +8,8 @@ import { routing }        from './app.routing';
 import { AlertComponent } from './_directives';
 import { AlertService, AuthenticationService, ApiService } from './_services';
 import { HomeComponent } from './home';
+import { LoginComponent } from './login';
+import { QueryComponent } from './query';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, } from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,7 +31,10 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent
+        HomeComponent,
+        LoginComponent,
+        HeaderComponent,
+        QueryComponent
     ],
     providers: [
         AlertService,
