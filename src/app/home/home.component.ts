@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit, ViewChild } from '@angular/core';
+import { ApiService } from '../_services'
 import { MatPaginator, MatTableDataSource } from '@angular/material';
-import { ActivatedRoute } from '@angular/router';
-import { AlertService, AuthenticationService, ApiService } from '../_services';
+
 
 @Component({templateUrl: 'home.component.html'})
 export class HomeComponent implements OnInit {
@@ -24,9 +24,6 @@ export class HomeComponent implements OnInit {
     dynamicArray: any = [];
     time_array: any = [];
     flag: boolean = false;
-    showHome: boolean = false;
-    loginData: any;
-    loading = false;
     displayedColumns: string[] = ['datetime', 'message'];
     public chartType: string = 'bar';
     public chartDatasets: Array<any> = [];
@@ -35,40 +32,17 @@ export class HomeComponent implements OnInit {
     @ViewChild(MatPaginator) paginator: MatPaginator;        
 
     constructor(
-        private apiService: ApiService,
-        private activatedRoute: ActivatedRoute,
-        private authenticationService: AuthenticationService,
-        private alertService: AlertService
-    ) { }
+        private apiService: ApiService
+        ) { }
 
     ngOnInit() 
     {
-        this.loginData = this.activatedRoute.snapshot.params;
-        this.onPageLoad();
-        this.organization = this.loginData.organization;
-        }
-
-        //on page load
-    onPageLoad() {
         this.defaultDate();
-        this.loading = true;
-        this.authenticationService.login(this.loginData)
-            .subscribe(
-                data => {
-                    if (data.length) {
-                        this.getDeviceIdByOrganization();
-                        this.showHome = true;
-                    }
-                    else {
-                        this.alertService.error("You're not authenticated to see this page");
-                        this.loading = false;
-                    }
-                },
-                error => {
-                    this.alertService.error("You're not authenticated to see this page");
-                    this.loading = false;
-                });
-    }
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        this.organization = this.currentUser[0].org;
+        this.getCurentDate();
+        this.getDeviceIdByOrganization();         
+        }
 
         defaultDate()
         {
@@ -112,13 +86,11 @@ export class HomeComponent implements OnInit {
                         var d2: any = new Date(b.datetime);
                         return d1 - d2;
                     })
-                    
                     this.devIdForSearch = this.sources[0].devID;
                     this.sourceValue = this.sources[0].source;
                     this.onLoadSource = this.sources;
                     this.timeHistoryData(this.startDate, this.endDate);
                     this.showLoader = false;
-                    this.defaultDate();
                 })
         })
     }

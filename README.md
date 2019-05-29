@@ -21,9 +21,14 @@
 
 ### Run Project:
 
-**Now open your browser and type the following URL:**
+**Execute the following command to run your project:**
+
+`npm start`
+
+**Now your project is running on the port 4200 and you can check it on following URL:**
+
+[http://localhost:4200/](http://localhost:4200/)
 
 `http://localhost:4200/[organization]/[username]/[password]`
 
 Put your credentials (organization, username and password) in the above URL and press enter, it will take you to your dashboard.
-
