@@ -10,10 +10,4 @@ export class AppComponent
 {
     constructor(private auth: AuthenticationService) { }
 
-    //checking user login
-    loginCheck()
-    {
-        return this.auth.loginCheck()
-    }
-
 }

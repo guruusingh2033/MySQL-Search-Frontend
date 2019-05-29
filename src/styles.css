@@ -291,6 +291,11 @@ select.form-control:focus {
     display: block;
 }
 
+.header-margin
+{
+    margin: -30px -30px 15px -30px
+}
+
 @-webkit-keyframes spin {
  0% {
  -webkit-transform: rotate(0deg);
