@@ -10,6 +10,7 @@ import { AuthGuard } from './_guards';
 import { AlertService, AuthenticationService, ApiService } from './_services';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
+import { QueryComponent } from './query';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, } from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,7 +35,8 @@ import { HeaderComponent } from './header';
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        HeaderComponent
+        HeaderComponent,
+        QueryComponent
     ],
     providers: [
         AuthGuard,

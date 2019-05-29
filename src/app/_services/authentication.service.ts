@@ -20,6 +20,15 @@ export class AuthenticationService {
             }));            
     }
 
+    //logging in user with query string
+    loginWithQueryString(loginData: User) {
+        return this.http.post<any>(`${environment.apiUrl}/login`, { organization: loginData.organization, username: loginData.username, password: loginData.password })
+            .pipe(map(user => {
+                return user;
+            }));  
+    }
+
+
     //logging user out
     logout() {
         localStorage.removeItem('currentUser');
