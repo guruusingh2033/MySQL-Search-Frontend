@@ -2,6 +2,7 @@
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 import { AlertService, AuthenticationService, ApiService } from '../_services';
+import * as _ from "lodash";
 
 @Component({ templateUrl: 'query.component.html' })
 export class QueryComponent implements OnInit {
@@ -105,10 +106,10 @@ export class QueryComponent implements OnInit {
                             var d2: any = new Date(b.datetime);
                             return d1 - d2;
                         })
-
+                        
                         this.devIdForSearch = this.sources[0].devID;
                         this.sourceValue = this.sources[0].source;
-                        this.onLoadSource = this.sources;
+                        this.onLoadSource = _.uniqBy(this.sources, 'source');
                         this.timeHistoryData(this.startDate, this.endDate);
                         this.showLoader = false;
                         this.defaultDate();
@@ -128,7 +129,7 @@ export class QueryComponent implements OnInit {
                     var d2: any = new Date(b.datetime);
                     return d1 - d2;
                 })
-                this.onLoadSource = this.onEventChangeSources;
+                this.onLoadSource = _.uniqBy(this.onEventChangeSources, 'source');
                 this.sourceValue = this.onEventChangeSources[0].source;
             })
     }

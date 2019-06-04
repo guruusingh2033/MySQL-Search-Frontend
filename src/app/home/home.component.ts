@@ -1,6 +1,7 @@
 ﻿import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../_services'
 import { MatPaginator, MatTableDataSource } from '@angular/material';
+import * as _ from "lodash";
 
 
 @Component({templateUrl: 'home.component.html'})
@@ -88,7 +89,7 @@ export class HomeComponent implements OnInit {
                     })
                     this.devIdForSearch = this.sources[0].devID;
                     this.sourceValue = this.sources[0].source;
-                    this.onLoadSource = this.sources;
+                    this.onLoadSource = _.uniqBy(this.sources, 'source');     
                     this.timeHistoryData(this.startDate, this.endDate);
                     this.showLoader = false;
                 })
@@ -108,7 +109,7 @@ export class HomeComponent implements OnInit {
                     var d2:any = new Date(b.datetime);
                     return d1 - d2;                
                 })
-                this.onLoadSource = this.onEventChangeSources;
+                this.onLoadSource = _.uniqBy(this.onEventChangeSources, 'source');
                 this.sourceValue = this.onEventChangeSources[0].source;                
                 })
     }
