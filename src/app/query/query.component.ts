@@ -145,7 +145,7 @@ export class QueryComponent implements OnInit {
                     this.onEventChangeSources = res.sort(function (a: any, b: any) { //data sorting
                         var d1: any = new Date(a.datetime);
                         var d2: any = new Date(b.datetime);
-                        return d1 - d2;
+                        return d2 - d1;
                     })
                 }
 
